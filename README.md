@@ -1,0 +1,1 @@
+javascript:void(!function(d){var s=d.createElement('script');s.type='text/javascript';s.src='//cdn.jsdelivr.net/gh/yohns0201/gsvColorCustom@master/gsvColorCustom.js';d.head.appendChild(s);}(document));
