@@ -45,3 +45,36 @@ document.querySelectorAll('.sc-brqgnP').forEach((element) => {
 
     }
 });
+function applyStyles() {
+    const element = document.querySelector('.efbiLY');
+
+    // 기본 스타일 적용
+    element.style.width = "700px";
+    element.style.height = "100px";
+    element.style.fontSize = "30px";
+
+    // @media (max-width: 742px) 규칙에 따라 스타일 변경
+    const mediaQuery = window.matchMedia('(max-width: 742px)');
+
+    function handleMediaChange(e) {
+        if (e.matches) {
+            // 화면이 742px 이하일 때 적용할 스타일 추가
+            element.style.width = "100%";
+            element.style.height = "50px";
+            element.style.fontSize = "15px";
+        } else {
+            // 화면이 742px 이상일 때 기본 스타일로 되돌림
+            element.style.width = "700px";
+            element.style.height = "100px";
+            element.style.fontSize = "30px";
+        }
+    }
+
+    // 미디어 쿼리에 이벤트 리스너 추가
+    mediaQuery.addListener(handleMediaChange);
+
+    // 초기 호출로 현재 상태에 맞게 스타일 적용
+    handleMediaChange(mediaQuery);
+}
+
+applyStyles();
