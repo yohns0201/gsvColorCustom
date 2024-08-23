@@ -1,6 +1,4 @@
-const daWiQDElements = document.querySelectorAll('.sc-brqgnP');
-
-daWiQDElements.forEach((element) => {
+document.querySelectorAll('.sc-brqgnP').forEach((element) => {
     const eQxToMElements = element.querySelectorAll('.eQxToM');
 
     if (eQxToMElements.length > 0) {
